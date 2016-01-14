@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#FFF8B0"
+    android:orientation="vertical"
+    tools:context="com.example.beasiy.homeworkone.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:background="#D3BCD4"
+        android:textColor="#FF00FF"
+        android:textStyle="bold"
+        android:text="Tip Calculator App" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingTop="25dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:hint="Please enter the pre-tax bill"
+            android:layout_weight="0.7"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/bill"
+            android:autoText="false" />
+
+        <Button
+            android:layout_weight="0.3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter"
+            android:onClick="saveBill"
+            android:id="@+id/button"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="20sp"
+        android:textColor="#FF00FF"
+        android:textStyle="bold"
+        android:text="Choose a percentage to tip:" />
+
+    <RadioGroup
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ten"
+            android:text="10%"
+            android:onClick="calculateTip" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fifteen"
+            android:text="15%"
+            android:onClick="calculateTip" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/twenty"
+            android:text="20%"
+            android:onClick="calculateTip" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="20sp"
+        android:textColor="#FF00FF"
+        android:textStyle="bold"
+        android:text="Tip value:" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:textSize="50sp"
+        android:id="@+id/tip"
+        android:textColor="#E55EA2"
+        android:textStyle="bold"
+        android:text="Mystery..." />
+</LinearLayout>
